@@ -9,3 +9,18 @@
 *::after {
     box-sizing: border-box;
 }
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.image {
+    width: 35%;
+    height: 100%;
+    background-image: url('./assets/images/form-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
