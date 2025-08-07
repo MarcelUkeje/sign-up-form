@@ -25,6 +25,11 @@
     background-repeat: no-repeat;
 }
 
+.main-form {
+    flex-grow: 1;
+    background-color: #f5f5f6;
+}
+
 @font-face {
     font-family: 'Norse';
     src: url('./assets/fonts/Norse-Bold.woff2') format('woff2'),
