@@ -108,3 +108,26 @@ input:focus {
 input[type="password"]:invalid {
   border: 2px solid red;
 }
+
+.main-form > :nth-child(3){
+    padding: 1.5rem 1.7rem;
+}
+
+button {
+    background-color: #596d48;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.3rem 2rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);;
+}
+
+.main-form > :nth-child(3) p{
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+}
+
+.main-form > :nth-child(3) p > a{
+    text-decoration: none;
+    color: #596d48;
+}
