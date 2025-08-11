@@ -32,6 +32,23 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+.container .odin-logo {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    font-family: 'Norse';
+    font-weight: bold;
+    font-size: 5rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+    gap: 6px;
+    padding: 1rem 0;
+}
+
+.odin-logo img{
+    height: 7rem;
+    width: auto;
 }
 
 .main-form {
