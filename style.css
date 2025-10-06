@@ -13,6 +13,14 @@
 
 @font-face {
     font-family: 'Norse';
+    font-weight: bold;
+    font-style: normal;
+    src: url('assets/fonts/Norse-Bold.woff') format("woff"),
+         url('assets/fonts/Norse-Bold.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: 'Norse';
     src: url('./assets/fonts/Norse-Bold.woff2') format('woff2'),
         url('./assets/fonts/Norse-Bold.woff') format('woff');
     font-weight: bold;
@@ -20,114 +28,165 @@
     font-display: swap;
 }
 
-.container {
-    display: flex;
-    width: 100vw;
+body {
     height: 100vh;
+    height: 100svh;
+    min-height: 100svh;
+    min-height: 100svh;
+    overflow: hidden;
+}
+
+.main-content {
+    height: 100%;
+    display: flex;
+}
+
+.main-content > div {
+    flex-basis: auto;
 }
 
 .image {
-    width: 35%;
+    width: 40%;
     height: 100%;
-    background-image: url('./assets/images/form-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-top: 15%;
+    background-image: url('assets/images/form-background.jpg');
+    background-size: 100% 100%;
+    position: relative;
 }
 
-.container .odin-logo {
-    background-color: rgba(0, 0, 0, 0.5);
+.banner {
+    background-color: oklch(0% 0 0 / 0.5);
+    height: 25%;
+    color: oklch(100% 0.00011 271.152);
+    position: absolute;
     width: 100%;
-    font-family: 'Norse';
-    font-weight: bold;
-    font-size: 5rem;
-    color: #ffffff;
+    top: 20%;
+    left: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 6px;
-    padding: 1rem 0;
+    align-items: center;
 }
 
-.odin-logo img{
-    height: 7rem;
-    width: auto;
+.banner > * {
+    flex-basis: 0;
+}
+
+.banner img {
+    width: 100%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.banner p {
+    font-family: 'Norse';
+    font-size: 5rem;
+}
+
+.image .attribution {
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    color: oklch(100% 0.00011 271.152);
+    margin-bottom: 1rem;
+}
+
+.image .attribution a {
+    color: oklch(100% 0.00011 271.152);
+}
+
+.form {
+    width: 60%;
+    background-color: oklch(98.5% 0.002 247.839);
+    padding-block: 2rem;
+}
+
+.container {
+    padding-inline: 2rem;
+}
+
+.preamble {
+    font-weight: 600;
+    padding-block: 2rem;
+    max-width: 65ch;
+}
+
+.preamble p:last-child {
+    margin-block-start: 1.5rem;
 }
 
 .main-form {
-    flex-grow: 1;
-    background-color: #f5f5f6;
-}
-
-.main-form > :nth-child(1) {
-    padding: 5em 1.7em 2em;
-    max-width: 60ch;
-    font-weight: 500;
-}
-
-.main-form > div > :nth-child(2) {
-    margin-bottom: 2em;
-}
-
-.main-form > :nth-child(2) {
-    padding: 1em 1.7em 1.5em;
-    background-color: #ffffff;
+    background-color: oklch(100% 0.00011 271.152);
+    padding-block: 1.5rem;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2)
 }
 
-form {
-    display: flex;
-    font-size: 0.1rem;
-    gap: 4rem;
+.main-form p:first-child {
+    font-weight: 600;
 }
 
-form > div {
+.user-info {
     display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    margin-top: 1rem;
+    gap: 3rem;
+    margin-block-start: 1rem;
 }
 
-form > div > .form-unit{
+.user-info > div {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
-form input {
-    border: solid #e5e7eb 1px;
-    border-radius: 0.2rem;
+.form-unit {
+    display: flex;
+    flex-direction: column;
 }
 
-input:focus {
-  border: 2px solid blue;
-  box-shadow: 0 0 0.3rem rgba(0, 0, 255, 0.5);
-  outline: none;
+.form-unit label{
+    font-size: .5rem;
 }
 
-input[type="password"]:invalid {
-  border: 2px solid red;
+.form-unit input {
+    border: 2px solid #E5E7EB;
+    border-radius: 3px;
+    padding-inline: .5rem;
+    padding-block: .2rem;
 }
 
-.main-form > :nth-child(3){
-    padding: 1.5rem 1.7rem;
+.form-unit input:invalid {
+    border: 2px solid red;
 }
 
-button {
-    background-color: #596d48;
-    color: #ffffff;
+.form-unit input:focus {
+    border-color: transparent;
+    outline: 2px solid blue;
+    box-shadow: 0 0 5px 0px blue;
+}
+
+.submission {
+    padding-block-start: 2rem;
+}
+
+.submission > *,
+.submission a {
+    font-size: .8rem;
+}
+
+.submission button {
+    background-color: oklch(50.813% 0.06093 131.389);
     font-weight: bold;
+    color: #ffffff;
     padding: 0.3rem 2rem;
     border-radius: 0.2rem;
     box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);;
 }
 
-.main-form > :nth-child(3) p{
-    margin-top: 1.5rem;
-    font-size: 0.7rem;
+.submission p {
+    margin-block-start: 1rem;
 }
 
-.main-form > :nth-child(3) p > a{
+.submission a {
+    color: oklch(50.813% 0.06093 131.389);
+    font-weight: 700;
     text-decoration: none;
-    color: #596d48;
 }

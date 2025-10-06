@@ -1,63 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcel's Signup Form </title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="image">
-            <div class="odin-logo">
-                <img src="./assets/images/odin-lined.png" alt="Odin Logo"> ODIN
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Sign Up Form</title>
+    </head>
+    <body>
+        <main class="main-content">
+            <div class="image">
+                <div class="banner">
+                    <img src="assets/images/odin-lined.png" alt="">
+                    <p>ODIN</p>
+                </div>
+                <p class="attribution">Photo by <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
             </div>
-        </div>
-        <div class="main-form">
-            <div>
+            <div class="form">
+            <div class="container preamble">
                 <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
                 <p>Sign up <em>now</em> to get started.</p>
                 <p>You <em>know</em> you want to.</p>
             </div>
-            <div>
-                Let's do this!
-                <div>
-                    <form action="post">
-                        <div>
-                            <div class="form-unit">
-                                <label for="first_name">FIRST NAME</label>
-                                <input type="text" id="first_name" placeholder="John">
-                            </div>
-                            <div class="form-unit">
-                                <label for="email">EMAIL</label>
-                                <input type="email" id="email" placeholder="example@gmail.com">
-                            </div>
-                            <div class="form-unit">
-                                <label for="password">PASSWORD</label>
-                                <input type="password" id="password" pattern=".{8,}" required placeholder="At least 8 characters">
-                            </div>
+            <div class="container main-form">
+                <p>Let's do this!</p>
+                <form class="user-info" method="post">
+                    <div>
+                        <div class="form-unit">
+                            <label for="first_name">FIRST NAME</label>
+                            <input type="text" id="first_name" placeholder="John">
                         </div>
-                        <div>
-                            <div class="form-unit">
-                                <label for="last_name">LAST NAME</label>
-                                <input type="text" id="last_name" placeholder="Doe">
-                            </div>
-                            <div class="form-unit">
-                                <label for="phone_number">PHONE NUMBER</label>
-                                <input type="number" id="phone_number" placeholder="+2340812345678">
-                            </div>
-                            <div class="form-unit">
-                                <label for="confirm_password">CONFIRM PASSWORD</label>
-                                <input type="password" id="confirm_password" pattern=".{8,}" required placeholder="Same as password">
-                            </div>
+                        <div class="form-unit">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" placeholder="example@gmail.com">
                         </div>
-                    </form>
-                </div>
+                        <div class="form-unit">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" id="password" pattern=".{8,}" required placeholder="At least 8 characters">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-unit">
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" id="last_name" placeholder="Doe">
+                        </div>
+                        <div class="form-unit">
+                            <label for="phone_number">PHONE NUMBER</label>
+                            <input type="tel" id="phone_number" placeholder="+2340812345678">
+                        </div>
+                        <div class="form-unit">
+                            <label for="confirm_password">CONFIRM PASSWORD</label>
+                            <input type="password" id="confirm_password" pattern=".{8,}" required placeholder="Same as password">
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div>
+            <div class="container submission">
                 <button type="submit">Create Account</button>
                 <p>Already have an account? <a href="https://skiloby.com/#">Log in</a></p>
             </div>
         </div>
-    </div>
-</body>
+        </main>
+    </body>
+</html>
